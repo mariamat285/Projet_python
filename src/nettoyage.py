@@ -1,24 +1,3 @@
-
-#-------------NETTOYER TELEPHONE-------------#
-def nettoyer_telephone(telephone):
-    
-    telephone = telephone.replace(" ", "").replace("-", "")
-
-    if telephone.startswith("+221"):
-        telephone = telephone[4:]
-    elif telephone.startswith("00221"):
-        telephone = telephone[5:]
-    
-    return telephone
-
-#-------------NETTOYER POIDS-------------#
-def nettoyer_poids(poids):
-    return poids.strip()
-
-#-------------NETTOYER TAILLE-------------#
-def nettoyer_taille(taille):
-    return taille.strip()
-
 #-------------METTRE TOUT LES NOMS EN TITTLE----------#
 def nettoyer_nom(nom):
     nom = nom.strip().title()
@@ -50,9 +29,26 @@ def nettoyer_ville(ville):
         ville = corrections[ville.lower()]
     
     return ville
+#-------------NETTOYER TELEPHONE-------------#
+def nettoyer_telephone(telephone):
+    
+    telephone = telephone.replace(" ", "").replace("-", "")
+
+    if telephone.startswith("+221"):
+        telephone = telephone[4:]
+    elif telephone.startswith("00221"):
+        telephone = telephone[5:]
+    
+    return telephone
 #-------------NETTOYER AGE-------------#
 def nettoyer_age(age):
     return age.strip()
+#-------------NETTOYER POIDS-------------#
+def nettoyer_poids(poids):
+    return poids.strip()
+#-------------NETTOYER TAILLE-------------#
+def nettoyer_taille(taille):
+    return taille.strip()
 #-------------NETTOYER DOUBLONS-------------#
 def nettoyer_doublons(patients_valides):
     liste_propre = []
@@ -63,4 +59,45 @@ def nettoyer_doublons(patients_valides):
         else:
             doublons.append(patient)
     return doublons, liste_propre
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

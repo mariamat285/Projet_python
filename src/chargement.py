@@ -30,7 +30,5 @@ def chargement(fichier):
                         print(f"IndexError : {e}")
         return patients
     except  FileNotFoundError:
-        print(f"Erreur : le fichier '{fichier}' est introuvable.")
         return []   
 
-chargement("data/patients_bruts.txt")

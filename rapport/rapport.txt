@@ -1,0 +1,17 @@
+=== RAPPORT DE NETTOYAGE ===
+Total patients lus : 300
+Patients valides : 223
+Doublons supprimés : 0
+Lignes rejetées : 77
+Moyenne âge : 46.7085201793722
+Moyenne poids : 80.96591928251122
+Ville la plus fréquente : Louga
+Répartition groupes sanguins :
+  B- : 31
+  O- : 32
+  AB+ : 33
+  A+ : 23
+  O+ : 18
+  A- : 27
+  AB- : 30
+  B+ : 29
