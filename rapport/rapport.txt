@@ -1,17 +1,17 @@
 === RAPPORT DE NETTOYAGE ===
-Total patients lus : 300
-Patients valides : 223
+Total patients lus : 1015
+Patients valides : 618
 Doublons supprimés : 0
-Lignes rejetées : 77
-Moyenne âge : 46.7085201793722
-Moyenne poids : 80.96591928251122
-Ville la plus fréquente : Louga
+Lignes rejetées : 397
+Moyenne âge : 48.189320388349515
+Moyenne poids : 75.96925566343045
+Ville la plus fréquente : Dakar
 Répartition groupes sanguins :
-  B- : 31
-  O- : 32
-  AB+ : 33
-  A+ : 23
-  O+ : 18
-  A- : 27
-  AB- : 30
-  B+ : 29
+  O+ : 96
+  A- : 86
+  AB+ : 81
+  O- : 72
+  A+ : 62
+  B+ : 64
+  B- : 77
+  AB- : 80
