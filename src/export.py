@@ -25,7 +25,7 @@ def exporter_rapport(total, valides, rejetes, doublons, moy_age, moy_poids, vill
 
             contenu.write("\n")
             contenu.write("=====================================\n")
-            contenu.write("        RAPPORT DE NETTOYAGE        \n")
+            contenu.write("RAPPORT DE NETTOYAGE        \n")
             contenu.write("=====================================\n\n")
 
             contenu.write(" RESUME GENERAL\n")
@@ -48,7 +48,7 @@ def exporter_rapport(total, valides, rejetes, doublons, moy_age, moy_poids, vill
                 contenu.write(f"  - {groupe:<5} : {nombre}\n")
 
             contenu.write("\n=====================================\n")
-            contenu.write("        FIN DU RAPPORT              \n")
+            contenu.write("FIN DU RAPPORT              \n")
             contenu.write("=====================================\n")
 
     except Exception as e:

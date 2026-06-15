@@ -69,9 +69,11 @@ def nettoyer_taille(taille):
     return taille.strip()
 
 #-------------NETTOYER DOUBLONS-------------#
+#à fixer
 def nettoyer_doublons(patients_valides):
     liste_propre = []
     doublons = []
+    
     for patient in patients_valides:
         if patient not in liste_propre:
             liste_propre.append(patient)

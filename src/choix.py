@@ -70,21 +70,39 @@ def choix3(chemin):
 def choix4(chemin):
     try:
         patients_valides, patients_rejetes, doublons = choix3(chemin)
-        print(f"Total patients lus : {patient_total(patients_valides, patients_rejetes)}")
-        print(f"Patients valides : {nombre_valides(patients_valides)}")
-        print(f"Doublons supprimés : {len(doublons)}")
-        print(f"Lignes rejetées : {len(patients_rejetes)}")
-        print(f"Moyenne âge : {moyenne_age(patients_valides):.2f}")
-        print(f"Moyenne poids : {moyenne_poids(patients_valides):.2f}")
-        print(f"Ville la plus fréquente : {ville_frequente(patients_valides)}")
-        print("Répartition groupes sanguins :")
+
+        print("\n" + "="*40)
+        print("RAPPORT STATISTIQUES")
+        print("="*40)
+
+        total = patient_total(patients_valides, patients_rejetes)
+        print(f" Total patients lus        : {total}")
+        print(f" Patients valides          : {nombre_valides(patients_valides)}")
+        print(f" Doublons supprimés        : {len(doublons)}")
+        print(f" Lignes rejetées           : {len(patients_rejetes)}")
+
+        print("\n MOYENNES")
+        print("-" * 40)
+        print(f" Âge moyen                : {moyenne_age(patients_valides):.2f}")
+        print(f" Poids moyen              : {moyenne_poids(patients_valides):.2f}")
+
+        print("\n VILLE LA PLUS FRÉQUENTE")
+        print("-" * 40)
+        print(f" {ville_frequente(patients_valides)} ")
+
+        print("\n GROUPES SANGUINS")
+        print("-" * 40)
         for groupe, nombre in groupe_sanguin(patients_valides).items():
-            print(f"  {groupe} : {nombre} patients")
+            print(f"{groupe}              : {nombre} patient(s)")
+
+        print("="*40 + "\n")
+
         log("Statistiques affichées")
+
     except Exception as e:
         log(f"Erreur statistiques : {e}")
-        print(f"Erreur : {e}")
-
+        print("\n Une erreur est survenue")
+        print(f"Détail : {e}")
 #---------------------CHOIX 5 ---------------------------#
 def choix5(chemin):
     try:
