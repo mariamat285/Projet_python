@@ -4,13 +4,16 @@ from nettoyage import nettoyer_age, nettoyer_doublons, nettoyer_nom, nettoyer_po
 from statistiques import patient_total, nombre_valides, moyenne_poids, moyenne_age, ville_frequente, groupe_sanguin
 from validation import groupe_sanguin_valide, age_valide, telephone_valide, taille_valide, poids_valide, nom_valide, prenom_valide, detecter_anomalies
 from recherche import rechercher_patient
+from logs import log
 
 #----------------------CHOIX 1 --------------------------#
 def choix1(chemin):
     try:
         patients = chargement(chemin)
+        log(f"Fichier chargé : {len(patients)} patients — {chemin}")
         return patients, chemin
     except Exception as e:
+        log(f"Erreur chargement : {e}")
         print(f"Erreur : {e}")
         return [], chemin
 
@@ -19,7 +22,9 @@ def choix2(chemin):
     try:
         patients, chemin = choix1(chemin)
         detecter_anomalies(patients)
+        log("Anomalies affichées")
     except Exception as e:
+        log(f"Erreur anomalies : {e}")
         print(f"Erreur : {e}")
 
 #----------------------CHOIX 3 --------------------------#
@@ -55,8 +60,10 @@ def choix3(chemin):
                 patients_valides.append(patient)
 
         doublons_trouves, liste_propre = nettoyer_doublons(patients_valides)
+        log(f"Nettoyage : {len(liste_propre)} valides, {len(patients_rejetes)} rejetés, {len(doublons_trouves)} doublons")
         return liste_propre, patients_rejetes, doublons_trouves
     except Exception as e:
+        log(f"Erreur nettoyage : {e}")
         print(f"Erreur : {e}")
         return [], [], []
 
@@ -74,7 +81,9 @@ def choix4(chemin):
         print("Répartition groupes sanguins :")
         for groupe, nombre in groupe_sanguin(patients_valides).items():
             print(f"  {groupe} : {nombre} patients")
+        log("Statistiques affichées")
     except Exception as e:
+        log(f"Erreur statistiques : {e}")
         print(f"Erreur : {e}")
 
 #---------------------CHOIX 5 ---------------------------#
@@ -93,7 +102,9 @@ def choix5(chemin):
             ville_frequente(patients_valides),
             groupe_sanguin(patients_valides)
         )
+        log("Export CSV, JSON et rapport effectués")
     except Exception as e:
+        log(f"Erreur export : {e}")
         print(f"Erreur : {e}")
 
 #---------------------CHOIX 6 ---------------------------#
@@ -101,12 +112,15 @@ def choix6(chemin, critere, valeur):
     try:
         patients_valides, patients_rejetes, doublons = choix3(chemin)
         resultats = rechercher_patient(patients_valides, critere, valeur)
+        log(f"Recherche '{valeur}' par '{critere}' : {len(resultats)} résultat(s)")
         return resultats
     except Exception as e:
+        log(f"Erreur recherche : {e}")
         print(f"Erreur : {e}")
         return []
 
 #---------------------CHOIX 7 ---------------------------#
 def choix7():
     print("Au revoir !")
+    log("Programme terminé")
     exit()
