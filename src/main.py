@@ -1,7 +1,7 @@
 #---------------IMPORTATION DES FONCTIONS-----------------------------
 from choix import choix1,choix2,choix3,choix4,choix5,choix6,choix7
 from logs import log
-
+import os
 #--------------------COLORATION MENU -------------------------------------
 VIOLET = "\033[95m"
 CYAN   = "\033[96m"
@@ -34,6 +34,9 @@ while True:
         print(f"{VERT}V{RESET} Fichier trouvé !{RESET}")
         break
     except FileNotFoundError:
+        log(f"Fichier introuvable : {chemin}")
+        print(f"{ROUGE}X{RESET} Fichier introuvable, réessayez.{RESET}")
+    except PermissionError:
         log(f"Fichier introuvable : {chemin}")
         print(f"{ROUGE}X{RESET} Fichier introuvable, réessayez.{RESET}")
 

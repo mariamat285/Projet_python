@@ -1,4 +1,3 @@
-
 #--------------VALIDER TELEPHONE---------------------#
 def telephone_valide(telephone):
     if len(telephone) == 9 and telephone.startswith("7") and telephone.isdigit():

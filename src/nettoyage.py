@@ -7,7 +7,6 @@ def nettoyer_prenom(prenom):
     prenom = prenom.strip().title()
     return prenom
 #------------METTRE LES VILLE SOUS FORMAT CORRECT---------#
-#à revoir
 def nettoyer_ville(ville):
     corrections = {
         "dakarr": "Dakar",

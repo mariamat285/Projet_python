@@ -26,6 +26,7 @@ def chargement(fichier):
                             "taille":element[8]
                         }
                         patients.append(patient)
+                        
                     except IndexError as e:
                         print(f"IndexError : {e}")
         return patients
