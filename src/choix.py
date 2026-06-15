@@ -5,7 +5,9 @@ from statistiques import patient_total, nombre_valides, moyenne_poids, moyenne_a
 from validation import groupe_sanguin_valide, age_valide, telephone_valide, taille_valide, poids_valide, nom_valide, prenom_valide, detecter_anomalies
 from recherche import rechercher_patient
 from logs import log
-
+#----------------------COULEURS--------------------------#
+RESET  = "\033[0m"
+GRAS   = "\033[1m"
 #----------------------CHOIX 1 --------------------------#
 def choix1(chemin):
     try:
@@ -72,7 +74,7 @@ def choix4(chemin):
         patients_valides, patients_rejetes, doublons = choix3(chemin)
 
         print("\n" + "="*40)
-        print("RAPPORT STATISTIQUES")
+        print(f"{GRAS}RAPPORT STATISTIQUES{RESET}")
         print("="*40)
 
         total = patient_total(patients_valides, patients_rejetes)
@@ -81,16 +83,16 @@ def choix4(chemin):
         print(f" Doublons supprimés        : {len(doublons)}")
         print(f" Lignes rejetées           : {len(patients_rejetes)}")
 
-        print("\n MOYENNES")
+        print(f"\n {GRAS}MOYENNES{RESET}")
         print("-" * 40)
         print(f" Âge moyen                : {moyenne_age(patients_valides):.2f}")
         print(f" Poids moyen              : {moyenne_poids(patients_valides):.2f}")
 
-        print("\n VILLE LA PLUS FRÉQUENTE")
+        print(f"\n {GRAS}VILLE LA PLUS FRÉQUENTE{RESET}")
         print("-" * 40)
         print(f" {ville_frequente(patients_valides)} ")
 
-        print("\n GROUPES SANGUINS")
+        print(f"\n {GRAS}GROUPES SANGUINS{RESET}")
         print("-" * 40)
         for groupe, nombre in groupe_sanguin(patients_valides).items():
             print(f"{groupe}              : {nombre} patient(s)")
