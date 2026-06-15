@@ -14,7 +14,6 @@ def choix1(chemin):
         return patients, chemin
     except Exception as e:
         log(f"Erreur chargement : {e}")
-        print(f"Erreur : {e}")
         return [], chemin
 
 #----------------------CHOIX 2 --------------------------#

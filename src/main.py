@@ -10,18 +10,20 @@ ROUGE  = "\033[91m"
 JAUNE  = "\033[93m"
 RESET  = "\033[0m"
 GRAS   = "\033[1m"
+ROSE = "\033[95m"
+GRIS_CLAIR = "\033[37m"
 
 log("Programme démarré")
 #-------------------------AFFICHAGE-------------------------------------
 print(f"""
-{VIOLET}{GRAS}
+{CYAN}{GRAS}
 ╔══════════════════════════════════════════════╗
 ║   SYSTÈME DE NETTOYAGE DE DONNÉES MÉDICALES  ║
 ╚══════════════════════════════════════════════╝{RESET}
 
-{CYAN}Bienvenue !{RESET}
+{ROSE}Bienvenue !{RESET}
 
-{JAUNE}Avant d'accéder aux options de nettoyage,
+{GRIS_CLAIR}{GRAS}Avant d'accéder aux options de nettoyage,
 veuillez saisir le chemin du fichier
 que vous souhaitez nettoyer.{RESET}
 """)
@@ -33,13 +35,9 @@ while True:
         log(f"Chemin renseigné : {chemin}")
         print(f"{VERT}V{RESET} Fichier trouvé !{RESET}")
         break
-    except FileNotFoundError:
-        log(f"Fichier introuvable : {chemin}")
+    except Exception as e:
+        log(f"Erreur recherche : {e}")
         print(f"{ROUGE}X{RESET} Fichier introuvable, réessayez.{RESET}")
-    except PermissionError:
-        log(f"Fichier introuvable : {chemin}")
-        print(f"{ROUGE}X{RESET} Fichier introuvable, réessayez.{RESET}")
-
 #-----------------CREATION MENU ----------------------------------------
 while True:
     print(f"""

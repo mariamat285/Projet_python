@@ -22,16 +22,34 @@ def export_json(patients_valides, fichier):
 def exporter_rapport(total, valides, rejetes, doublons, moy_age, moy_poids, ville_freq, groupes_sanguin):
     try:
         with open("rapport/rapport.txt", "w", encoding="UTF-8") as contenu:
-            contenu.write("=== RAPPORT DE NETTOYAGE ===\n")
-            contenu.write(f"Total patients lus : {total}\n")
-            contenu.write(f"Patients valides : {valides}\n")
-            contenu.write(f"Doublons supprimés : {doublons}\n")
-            contenu.write(f"Lignes rejetées : {rejetes}\n")
-            contenu.write(f"Moyenne âge : {moy_age}\n")
-            contenu.write(f"Moyenne poids : {moy_poids}\n")
-            contenu.write(f"Ville la plus fréquente : {ville_freq}\n")
-            contenu.write("Répartition groupes sanguins :\n")
+
+            contenu.write("\n")
+            contenu.write("=====================================\n")
+            contenu.write("        RAPPORT DE NETTOYAGE        \n")
+            contenu.write("=====================================\n\n")
+
+            contenu.write(" RESUME GENERAL\n")
+            contenu.write("-------------------------------------\n")
+            contenu.write(f"Total patients lus      : {total}\n")
+            contenu.write(f"Patients valides        : {valides}\n")
+            contenu.write(f"Lignes rejetées         : {rejetes}\n")
+            contenu.write(f"Doublons supprimés      : {doublons}\n\n")
+
+            contenu.write(" STATISTIQUES\n")
+            contenu.write("-------------------------------------\n")
+            contenu.write(f"Âge moyen               : {moy_age:.2f}\n")
+            contenu.write(f"Poids moyen             : {moy_poids:.2f}\n")
+            contenu.write(f"Ville la plus fréquente : {ville_freq}\n\n")
+
+
+            contenu.write(" GROUPES SANGUINS\n")
+            contenu.write("-------------------------------------\n")
             for groupe, nombre in groupes_sanguin.items():
-                contenu.write(f"  {groupe} : {nombre}\n")
+                contenu.write(f"  - {groupe:<5} : {nombre}\n")
+
+            contenu.write("\n=====================================\n")
+            contenu.write("        FIN DU RAPPORT              \n")
+            contenu.write("=====================================\n")
+
     except Exception as e:
         print(f"Erreur export rapport : {e}")
