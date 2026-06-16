@@ -8,39 +8,26 @@ def nettoyer_prenom(prenom):
     return prenom
 #------------METTRE LES VILLE SOUS FORMAT CORRECT---------#
 def nettoyer_ville(ville):
-
-    villes = [
-        "Dakar", "Thiès", "Saint-Louis", "Kaolack", "Ziguinchor",
-        "Diourbel", "Fatick", "Kolda", "Louga", "Matam",
-        "Kaffrine", "Kédougou", "Sédhiou","Tambacounda"
-    ]
-
-    ville = ville.lower().strip()
-
-    meilleure_ville = ""
-    min_diff = 10
-
-    for v in villes:
-        v_test = v.lower().strip()
-
-        # différence de longueur
-        diff = abs(len(ville) - len(v_test))
-
-        # comparaison lettre par lettre
-        for i in range(min(len(ville), len(v_test))):
-            if ville[i] != v_test[i]:
-                diff += 1
-
-        # garder la meilleure ville
-        if diff < min_diff:
-            min_diff = diff
-            meilleure_ville = v
-
-    # vérification finale
-    if min_diff < len(meilleure_ville) / 2:
-        return meilleure_ville
-    else:
-        return "Ville inconnue"
+    corrections = {
+        "dakarr": "Dakar",
+        "dakkar": "Dakar",
+        "saint louis": "Saint-Louis",
+        "saint-louis": "Saint-Louis",  
+        "ziguincor": "Ziguinchor",
+        "ziginchor": "Ziguinchor",
+        "kaolak": "Kaolack",
+        "lougar": "Louga",
+        "tamba": "Tambacounda",
+        "diorbel": "Diourbel",
+        "thiès": "Thies",
+    }
+    
+    ville = ville.strip().title()
+    
+    if ville.lower() in corrections:
+        ville = corrections[ville.lower()]
+    
+    return ville
 #-------------NETTOYER TELEPHONE-------------#
 def nettoyer_telephone(telephone):
     

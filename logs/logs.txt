@@ -1,0 +1,37 @@
+[2026-06-15 23:54:05] Programme démarré
+[2026-06-16 07:34:17] Programme démarré
+[2026-06-16 07:34:21] Erreur recherche : [Errno 2] No such file or directory: 'da'
+[2026-06-16 07:34:32] Erreur recherche : [Errno 2] No such file or directory: 'saw/.txt'
+[2026-06-16 07:34:48] Chemin renseigné : data/patients_bruts.txt
+[2026-06-16 07:35:06] Fichier chargé : 300 patients — data/patients_bruts.txt
+[2026-06-16 07:35:06] Option 1 — 300 patients chargés
+[2026-06-16 07:35:13] Option 2 — affichage anomalies
+[2026-06-16 07:35:13] Fichier chargé : 300 patients — data/patients_bruts.txt
+[2026-06-16 07:35:13] Anomalies affichées
+[2026-06-16 07:35:37] Fichier chargé : 300 patients — data/patients_bruts.txt
+[2026-06-16 07:35:37] Nettoyage : 191 valides, 77 rejetés, 32 doublons
+[2026-06-16 07:35:37] Option 3 — 191 valides, 77 rejetés, 32 doublons
+[2026-06-16 07:35:42] Option 4 — affichage statistiques
+[2026-06-16 07:35:42] Fichier chargé : 300 patients — data/patients_bruts.txt
+[2026-06-16 07:35:42] Nettoyage : 191 valides, 77 rejetés, 32 doublons
+[2026-06-16 07:35:42] Statistiques affichées
+[2026-06-16 07:38:37] Option 6 — recherche 'kane' par 'nom'
+[2026-06-16 07:38:37] Fichier chargé : 300 patients — data/patients_bruts.txt
+[2026-06-16 07:38:37] Nettoyage : 191 valides, 77 rejetés, 32 doublons
+[2026-06-16 07:38:37] Recherche 'kane' par 'nom' : 5 résultat(s)
+[2026-06-16 07:38:37]  5 patient(s) trouvé(s)
+[2026-06-16 07:45:35] Programme démarré
+[2026-06-16 07:45:54] Chemin renseigné : data/patients_bruts.txt
+[2026-06-16 07:46:07] Option 4 — affichage statistiques
+[2026-06-16 07:46:07] Fichier chargé : 300 patients — data/patients_bruts.txt
+[2026-06-16 07:46:07] Nettoyage : 191 valides, 77 rejetés, 32 doublons
+[2026-06-16 07:46:07] Statistiques affichées
+[2026-06-16 07:47:49] Fichier chargé : 300 patients — data/patients_bruts.txt
+[2026-06-16 07:47:49] Nettoyage : 191 valides, 77 rejetés, 32 doublons
+[2026-06-16 07:47:49] Export CSV, JSON et rapport effectués
+[2026-06-16 07:47:49] Option 5 — fichiers exportés
+[2026-06-16 07:49:17] Option 6 — recherche 'kane' par 'nom'
+[2026-06-16 07:49:17] Fichier chargé : 300 patients — data/patients_bruts.txt
+[2026-06-16 07:49:17] Nettoyage : 191 valides, 77 rejetés, 32 doublons
+[2026-06-16 07:49:17] Recherche 'kane' par 'nom' : 5 résultat(s)
+[2026-06-16 07:49:17]  5 patient(s) trouvé(s)

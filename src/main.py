@@ -100,7 +100,8 @@ while True:
                 print(f"""
 {VIOLET}{'─'*50}{RESET}
 {JAUNE}ID{RESET}            : {patient['id']}
-{JAUNE}Nom{RESET}           : {patient['nom']} {patient['prenom']}
+{JAUNE}Nom{RESET}           : {patient['nom']} 
+{JAUNE}Preom{RESET}         : {patient['prenom']}
 {JAUNE}Âge{RESET}           : {patient['age']} ans
 {JAUNE}Téléphone{RESET}     : {patient['telephone']}
 {JAUNE}Ville{RESET}         : {patient['ville']}

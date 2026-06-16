@@ -1,1 +1,32 @@
 
+=====================================
+RAPPORT DE NETTOYAGE        
+=====================================
+
+ RESUME GENERAL
+-------------------------------------
+Total patients lus      : 268
+Patients valides        : 191
+Lignes rejetées         : 77
+Doublons supprimés      : 32
+
+ STATISTIQUES
+-------------------------------------
+Âge moyen               : 46.34
+Poids moyen             : 80.95
+Ville la plus fréquente : Louga
+
+ GROUPES SANGUINS
+-------------------------------------
+  - B-    : 24
+  - O-    : 29
+  - AB+   : 28
+  - A+    : 21
+  - O+    : 16
+  - A-    : 23
+  - AB-   : 25
+  - B+    : 25
+
+=====================================
+FIN DU RAPPORT              
+=====================================
